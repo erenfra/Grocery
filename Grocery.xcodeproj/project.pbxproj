@@ -8,17 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		2486C6102C7D5EF500DEBFCD /* GroceryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2486C60F2C7D5EF500DEBFCD /* GroceryApp.swift */; };
-		2486C6122C7D5EF500DEBFCD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2486C6112C7D5EF500DEBFCD /* ContentView.swift */; };
+		2486C6122C7D5EF500DEBFCD /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2486C6112C7D5EF500DEBFCD /* MainView.swift */; };
 		2486C6142C7D5EF600DEBFCD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2486C6132C7D5EF600DEBFCD /* Assets.xcassets */; };
 		2486C6172C7D5EF600DEBFCD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2486C6162C7D5EF600DEBFCD /* Preview Assets.xcassets */; };
+		2486C61E2C7D6B3D00DEBFCD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2486C61D2C7D6B3D00DEBFCD /* GoogleService-Info.plist */; };
+		2486C6212C7D6CA700DEBFCD /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 2486C6202C7D6CA700DEBFCD /* FirebaseAnalytics */; };
+		2486C6232C7D6CA700DEBFCD /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 2486C6222C7D6CA700DEBFCD /* FirebaseAuth */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2486C60C2C7D5EF500DEBFCD /* Grocery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Grocery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2486C60F2C7D5EF500DEBFCD /* GroceryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryApp.swift; sourceTree = "<group>"; };
-		2486C6112C7D5EF500DEBFCD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2486C6112C7D5EF500DEBFCD /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		2486C6132C7D5EF600DEBFCD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2486C6162C7D5EF600DEBFCD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2486C61D2C7D6B3D00DEBFCD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +30,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2486C6212C7D6CA700DEBFCD /* FirebaseAnalytics in Frameworks */,
+				2486C6232C7D6CA700DEBFCD /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,9 +57,11 @@
 		2486C60E2C7D5EF500DEBFCD /* Grocery */ = {
 			isa = PBXGroup;
 			children = (
+				2486C6242C7D6E8D00DEBFCD /* Authentication */,
 				2486C60F2C7D5EF500DEBFCD /* GroceryApp.swift */,
-				2486C6112C7D5EF500DEBFCD /* ContentView.swift */,
+				2486C6112C7D5EF500DEBFCD /* MainView.swift */,
 				2486C6132C7D5EF600DEBFCD /* Assets.xcassets */,
+				2486C61D2C7D6B3D00DEBFCD /* GoogleService-Info.plist */,
 				2486C6152C7D5EF600DEBFCD /* Preview Content */,
 			);
 			path = Grocery;
@@ -65,6 +73,13 @@
 				2486C6162C7D5EF600DEBFCD /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2486C6242C7D6E8D00DEBFCD /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Authentication;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +98,10 @@
 			dependencies = (
 			);
 			name = Grocery;
+			packageProductDependencies = (
+				2486C6202C7D6CA700DEBFCD /* FirebaseAnalytics */,
+				2486C6222C7D6CA700DEBFCD /* FirebaseAuth */,
+			);
 			productName = Grocery;
 			productReference = 2486C60C2C7D5EF500DEBFCD /* Grocery.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +130,9 @@
 				Base,
 			);
 			mainGroup = 2486C6032C7D5EF400DEBFCD;
+			packageReferences = (
+				2486C61F2C7D6CA700DEBFCD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 2486C60D2C7D5EF500DEBFCD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,6 +149,7 @@
 			files = (
 				2486C6172C7D5EF600DEBFCD /* Preview Assets.xcassets in Resources */,
 				2486C6142C7D5EF600DEBFCD /* Assets.xcassets in Resources */,
+				2486C61E2C7D6B3D00DEBFCD /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,7 +160,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2486C6122C7D5EF500DEBFCD /* ContentView.swift in Sources */,
+				2486C6122C7D5EF500DEBFCD /* MainView.swift in Sources */,
 				2486C6102C7D5EF500DEBFCD /* GroceryApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,11 +298,13 @@
 				DEVELOPMENT_TEAM = L5MEY32333;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Grocery;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -287,6 +312,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = fraga.renato.Grocery;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -304,11 +333,13 @@
 				DEVELOPMENT_TEAM = L5MEY32333;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Grocery;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -316,6 +347,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = fraga.renato.Grocery;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -344,6 +379,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2486C61F2C7D6CA700DEBFCD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2486C6202C7D6CA700DEBFCD /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2486C61F2C7D6CA700DEBFCD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		2486C6222C7D6CA700DEBFCD /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2486C61F2C7D6CA700DEBFCD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2486C6042C7D5EF400DEBFCD /* Project object */;
 }
