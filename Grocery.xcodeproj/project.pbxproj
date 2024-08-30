@@ -21,6 +21,8 @@
 		2486C63B2C816A3C00DEBFCD /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2486C63A2C816A3C00DEBFCD /* AuthViewModel.swift */; };
 		2486C63D2C8170F300DEBFCD /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2486C63C2C8170F300DEBFCD /* PrimaryButton.swift */; };
 		2486C63F2C8175D800DEBFCD /* SecondaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2486C63E2C8175D800DEBFCD /* SecondaryButton.swift */; };
+		2486C6412C817DDD00DEBFCD /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2486C6402C817DDD00DEBFCD /* TabBar.swift */; };
+		2486C6432C817E4700DEBFCD /* FavoriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2486C6422C817E4700DEBFCD /* FavoriteView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,8 @@
 		2486C63A2C816A3C00DEBFCD /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		2486C63C2C8170F300DEBFCD /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 		2486C63E2C8175D800DEBFCD /* SecondaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryButton.swift; sourceTree = "<group>"; };
+		2486C6402C817DDD00DEBFCD /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		2486C6422C817E4700DEBFCD /* FavoriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +78,9 @@
 				2486C6372C81694100DEBFCD /* Components */,
 				2486C6242C7D6E8D00DEBFCD /* Authentication */,
 				2486C60F2C7D5EF500DEBFCD /* GroceryApp.swift */,
+				2486C6402C817DDD00DEBFCD /* TabBar.swift */,
 				2486C6112C7D5EF500DEBFCD /* MainView.swift */,
+				2486C6422C817E4700DEBFCD /* FavoriteView.swift */,
 				2486C6332C8162D900DEBFCD /* SplashView.swift */,
 				2486C6312C7ED5D300DEBFCD /* SettingsView.swift */,
 				2486C6132C7D5EF600DEBFCD /* Assets.xcassets */,
@@ -194,10 +200,12 @@
 				2486C6322C7ED5D300DEBFCD /* SettingsView.swift in Sources */,
 				2486C63D2C8170F300DEBFCD /* PrimaryButton.swift in Sources */,
 				2486C62C2C7D77C300DEBFCD /* AuthenticationManager.swift in Sources */,
+				2486C6432C817E4700DEBFCD /* FavoriteView.swift in Sources */,
 				2486C6342C8162D900DEBFCD /* SplashView.swift in Sources */,
 				2486C63F2C8175D800DEBFCD /* SecondaryButton.swift in Sources */,
 				2486C6362C81672E00DEBFCD /* AuthView.swift in Sources */,
 				2486C63B2C816A3C00DEBFCD /* AuthViewModel.swift in Sources */,
+				2486C6412C817DDD00DEBFCD /* TabBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

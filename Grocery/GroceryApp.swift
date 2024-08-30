@@ -17,7 +17,7 @@ struct GroceryApp: App {
   }
   var body: some Scene {
     WindowGroup {
-      MainView()
+      TabBar()
     }
   }
 }

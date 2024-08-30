@@ -19,10 +19,8 @@ struct MainView: View {
           Color(Color.background)
             .ignoresSafeArea()
           VStack {
-            Image(systemName: "cart")
-              .imageScale(.large)
-              .foregroundStyle(.tint)
             Text("Your Grocery List App")
+              .foregroundStyle(Color.text)
           }
           .padding()
           .toolbar {
@@ -32,6 +30,7 @@ struct MainView: View {
               } label: {
                 Image(systemName: "gear")
                   .padding(.horizontal)
+                  .foregroundStyle(Color.text)
               }
             }
             ToolbarItem(placement: .topBarTrailing) {
@@ -46,6 +45,7 @@ struct MainView: View {
               } label: {
                 Image(systemName: "rectangle.portrait.and.arrow.right")
                   .padding(.horizontal)
+                  .foregroundStyle(Color.text)
               }
             }
         }
