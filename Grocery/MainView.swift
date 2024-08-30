@@ -13,33 +13,43 @@ struct MainView: View {
 
   var body: some View {
     ZStack {
-      NavigationStack {
-        VStack {
-          Image(systemName: "cart")
-            .imageScale(.large)
-            .foregroundStyle(.tint)
-          Text("Your Grocery List App")
-          Button {
-            Task {
-              do {
-                try AuthenticationManager.shared.signOut()
-                self.showAuthenticationView = true
-              } catch {
 
+      NavigationStack {
+        ZStack {
+          Color(Color.background)
+            .ignoresSafeArea()
+          VStack {
+            Image(systemName: "cart")
+              .imageScale(.large)
+              .foregroundStyle(.tint)
+            Text("Your Grocery List App")
+          }
+          .padding()
+          .toolbar {
+            ToolbarItem(placement: .topBarLeading) {
+              Button {
+
+              } label: {
+                Image(systemName: "gear")
+                  .padding(.horizontal)
               }
             }
-
-          } label: {
-            Text("Log Out")
-              .font(.headline)
-              .foregroundStyle(Color.white)
-              .frame(height: 55)
-              .frame(maxWidth: .infinity)
-              .background(Color.blue)
-              .cornerRadius(10)
-          }
+            ToolbarItem(placement: .topBarTrailing) {
+              Button {
+                Task {
+                  do {
+                    try AuthenticationManager.shared.signOut()
+                    self.showAuthenticationView = true
+                  } catch {
+                  }
+                }
+              } label: {
+                Image(systemName: "rectangle.portrait.and.arrow.right")
+                  .padding(.horizontal)
+              }
+            }
         }
-        .padding()
+        }
       }
     }.onAppear {
       let authUser = try? AuthenticationManager.shared.getAuthenticatedUser()
@@ -47,7 +57,7 @@ struct MainView: View {
     }
     .fullScreenCover(isPresented: $showAuthenticationView) {
       NavigationStack{
-        AuthenticationView(showAuthenticationView: $showAuthenticationView)
+        AuthView(showAuthenticationView: $showAuthenticationView)
       }
     }
   }
