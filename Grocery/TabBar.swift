@@ -8,20 +8,34 @@
 import SwiftUI
 
 struct TabBar: View {
-    var body: some View {
+  @State private var showSplash = true
+  var body: some View {
+    ZStack {
       TabView {
         MainView()
           .tabItem {
-            Label("Cart", systemImage: "cart")
-           }
+            Label("List", systemImage: "list.bullet.clipboard")
+          }
         FavoriteView()
           .tabItem {
-            Label("Cart", systemImage: "heart")
-           }
-      }
+            Label("Favourites", systemImage: "heart")
+          }
+      }.tint(.text)
+        .opacity(showSplash ? 0 : 1)
+      
+      SplashView()
+        .opacity(showSplash ? 1 : 0)
+        .onAppear {
+          DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            withAnimation() {
+              self.showSplash = false
+            }
+          }
+        }
     }
+  }
 }
 
 #Preview {
-    TabBar()
+  TabBar()
 }

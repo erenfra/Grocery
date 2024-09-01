@@ -10,10 +10,10 @@ import SwiftUI
 struct MainView: View {
 
   @State private var showAuthenticationView = false
+  @State private var showSettingsView = false
 
   var body: some View {
     ZStack {
-
       NavigationStack {
         ZStack {
           Color(Color.background)
@@ -26,11 +26,16 @@ struct MainView: View {
           .toolbar {
             ToolbarItem(placement: .topBarLeading) {
               Button {
-
+                showSettingsView = true
               } label: {
                 Image(systemName: "gear")
                   .padding(.horizontal)
                   .foregroundStyle(Color.text)
+              }.sheet(isPresented: $showSettingsView) {
+                SettingsView()
+                  .presentationDetents([.height(250)])
+                  .presentationBackground(.ultraThinMaterial)
+                  .presentationCornerRadius(20)
               }
             }
             ToolbarItem(placement: .topBarTrailing) {
@@ -53,7 +58,7 @@ struct MainView: View {
       }
     }.onAppear {
       let authUser = try? AuthenticationManager.shared.getAuthenticatedUser()
-      self.showAuthenticationView = authUser == nil
+      self.showAuthenticationView = false//authUser == nil
     }
     .fullScreenCover(isPresented: $showAuthenticationView) {
       NavigationStack{

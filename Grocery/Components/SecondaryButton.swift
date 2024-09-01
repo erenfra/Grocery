@@ -8,18 +8,19 @@
 import SwiftUI
 
 struct SecondaryButton: View {
-    var body: some View {
-      Text("Register")
-        .font(.headline)
-        .foregroundStyle(Color.textButton)
-        .frame(height: 55)
-        .frame(maxWidth: .infinity)
-        .background(Color.secondaryButton)
-        .cornerRadius(8)
+  var title: String
+  var body: some View {
+    Text(title)
+      .font(.headline)
+      .foregroundStyle(Color.textButton)
+      .frame(height: 55)
+      .frame(maxWidth: .infinity)
+      .background(Color.secondaryButton)
+      .cornerRadius(8)
 
-    }
+  }
 }
 
 #Preview {
-    SecondaryButton()
+  SecondaryButton(title: "Register")
 }

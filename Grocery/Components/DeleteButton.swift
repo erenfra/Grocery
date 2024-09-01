@@ -1,13 +1,13 @@
 //
-//  PrimaryButton.swift
+//  DeleteButton.swift
 //  Grocery
 //
-//  Created by Renato Oliveira Fraga on 8/29/24.
+//  Created by Renato Oliveira Fraga on 8/31/24.
 //
 
 import SwiftUI
 
-struct PrimaryButton: View {
+struct DeleteButton: View {
   var title: String
   var body: some View {
     Text(title)
@@ -15,13 +15,12 @@ struct PrimaryButton: View {
       .foregroundStyle(Color.white)
       .frame(height: 55)
       .frame(maxWidth: .infinity)
-      .background(Color.primaryButton)
+      .background(Color.red)
       .cornerRadius(8)
 
   }
 }
 
 #Preview {
-  PrimaryButton(title: "Log In")
+  DeleteButton(title: "Delete")
 }
-

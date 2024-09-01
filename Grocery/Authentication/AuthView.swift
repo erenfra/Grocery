@@ -18,11 +18,9 @@ struct AuthView: View {
           Image("LogIcon")
             .resizable()
             .scaledToFit()
-            .frame(width: 120)
-            .overlay {
-              RoundedRectangle(cornerRadius: 20)
-                .stroke(Color.text)
-            }.padding()
+            .frame(width: 130)
+            //.padding()
+
           VStack(spacing: 20) {
             VStack(alignment: .leading, spacing: 10) {
               Text("Your Email")
@@ -70,7 +68,7 @@ struct AuthView: View {
               }
             }
           } label: {
-            PrimaryButton()
+            PrimaryButton(title: "Log In")
           }
           Spacer()
           VStack {
@@ -86,7 +84,7 @@ struct AuthView: View {
                 }
               }
             } label: {
-              SecondaryButton()
+              SecondaryButton(title: "Register")
             }
           }
           Spacer()

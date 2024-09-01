@@ -8,37 +8,40 @@
 import SwiftUI
 
 struct SettingsView: View {
-    var body: some View {
-      VStack {
-        Text("Settings")
-          .font(.largeTitle.bold())
+  @Environment(\.dismiss) var dismiss
+  var body: some View {
+    NavigationStack {
+      VStack(spacing: 20) {
         Button {
 
         } label: {
-          Text("Reset Password")
-            .font(.headline)
-            .foregroundStyle(Color.white)
-            .frame(height: 55)
-            .frame(maxWidth: .infinity)
-            .background(Color.blue)
-            .cornerRadius(10)
+          PrimaryButton(title: "Share Grocery List")
         }
-        Button {
+        Button(role: .destructive) {
 
         } label: {
-          Text("Delete Account")
-            .font(.headline)
-            .foregroundStyle(Color.white)
-            .frame(height: 55)
-            .frame(maxWidth: .infinity)
-            .background(Color.blue)
-            .cornerRadius(10)
+          DeleteButton(title: "Delete Account")
         }
         Spacer()
       }.padding()
-    }
+        .padding(.vertical, 20)
+        .navigationTitle("Settings")
+        .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+          ToolbarItem(placement: .topBarLeading) {
+            Button {
+              dismiss()
+            } label: {
+              Image(systemName: "arrow.left")
+                .padding(.horizontal)
+                .foregroundStyle(Color.text)
+            }
+          }
+        }
+    }.interactiveDismissDisabled()
+  }
 }
 
 #Preview {
-    SettingsView()
+  SettingsView()
 }
