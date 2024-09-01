@@ -24,6 +24,8 @@
 		2486C6412C817DDD00DEBFCD /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2486C6402C817DDD00DEBFCD /* TabBar.swift */; };
 		2486C6432C817E4700DEBFCD /* FavoriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2486C6422C817E4700DEBFCD /* FavoriteView.swift */; };
 		2486C6452C83FF7200DEBFCD /* DeleteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2486C6442C83FF7200DEBFCD /* DeleteButton.swift */; };
+		2486C6472C84063E00DEBFCD /* GroceryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2486C6462C84063E00DEBFCD /* GroceryCard.swift */; };
+		2486C6492C840A3A00DEBFCD /* ProductRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2486C6482C840A3A00DEBFCD /* ProductRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +45,8 @@
 		2486C6402C817DDD00DEBFCD /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		2486C6422C817E4700DEBFCD /* FavoriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteView.swift; sourceTree = "<group>"; };
 		2486C6442C83FF7200DEBFCD /* DeleteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteButton.swift; sourceTree = "<group>"; };
+		2486C6462C84063E00DEBFCD /* GroceryCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryCard.swift; sourceTree = "<group>"; };
+		2486C6482C840A3A00DEBFCD /* ProductRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +120,8 @@
 				2486C63C2C8170F300DEBFCD /* PrimaryButton.swift */,
 				2486C63E2C8175D800DEBFCD /* SecondaryButton.swift */,
 				2486C6442C83FF7200DEBFCD /* DeleteButton.swift */,
+				2486C6462C84063E00DEBFCD /* GroceryCard.swift */,
+				2486C6482C840A3A00DEBFCD /* ProductRow.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -202,6 +208,8 @@
 				2486C6102C7D5EF500DEBFCD /* GroceryApp.swift in Sources */,
 				2486C6322C7ED5D300DEBFCD /* SettingsView.swift in Sources */,
 				2486C63D2C8170F300DEBFCD /* PrimaryButton.swift in Sources */,
+				2486C6492C840A3A00DEBFCD /* ProductRow.swift in Sources */,
+				2486C6472C84063E00DEBFCD /* GroceryCard.swift in Sources */,
 				2486C62C2C7D77C300DEBFCD /* AuthenticationManager.swift in Sources */,
 				2486C6432C817E4700DEBFCD /* FavoriteView.swift in Sources */,
 				2486C6342C8162D900DEBFCD /* SplashView.swift in Sources */,

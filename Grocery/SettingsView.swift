@@ -9,6 +9,8 @@ import SwiftUI
 
 struct SettingsView: View {
   @Environment(\.dismiss) var dismiss
+  @Binding var showAuthenticationView: Bool
+
   var body: some View {
     NavigationStack {
       VStack(spacing: 20) {
@@ -16,6 +18,17 @@ struct SettingsView: View {
 
         } label: {
           PrimaryButton(title: "Share Grocery List")
+        }
+        Button {
+          Task {
+            do {
+              try AuthenticationManager.shared.signOut()
+              self.showAuthenticationView = true
+            } catch {
+            }
+          }
+        } label: {
+          SecondaryButton(title: "Log Out")
         }
         Button(role: .destructive) {
 
@@ -43,5 +56,5 @@ struct SettingsView: View {
 }
 
 #Preview {
-  SettingsView()
+  SettingsView(showAuthenticationView: .constant(false))
 }

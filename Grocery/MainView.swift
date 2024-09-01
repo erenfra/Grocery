@@ -32,23 +32,23 @@ struct MainView: View {
                   .padding(.horizontal)
                   .foregroundStyle(Color.text)
               }.sheet(isPresented: $showSettingsView) {
-                SettingsView()
-                  .presentationDetents([.height(250)])
+                SettingsView(showAuthenticationView: $showAuthenticationView)
+                  .presentationDetents([.height(320)])
                   .presentationBackground(.ultraThinMaterial)
-                  .presentationCornerRadius(20)
+                  .presentationCornerRadius(25)
               }
             }
             ToolbarItem(placement: .topBarTrailing) {
               Button {
-                Task {
-                  do {
-                    try AuthenticationManager.shared.signOut()
-                    self.showAuthenticationView = true
-                  } catch {
-                  }
-                }
+//                Task {
+//                  do {
+//                    try AuthenticationManager.shared.signOut()
+//                    self.showAuthenticationView = true
+//                  } catch {
+//                  }
+//                }
               } label: {
-                Image(systemName: "rectangle.portrait.and.arrow.right")
+                Image(systemName: "plus")
                   .padding(.horizontal)
                   .foregroundStyle(Color.text)
               }
