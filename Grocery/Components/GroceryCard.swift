@@ -15,14 +15,14 @@ struct GroceryCard: View {
       Image(image)
         .resizable()
         .scaledToFit()
-        .frame(width:80)
+        .frame(width:100)
       Text(name)
         .font(.headline)
         .multilineTextAlignment(.center)
       .bold()
     }.frame(width: 150, height: 150)
     .overlay {
-      RoundedRectangle(cornerRadius: 20)
+      RoundedRectangle(cornerRadius: 10)
         .stroke(Color.text)
     }
 
@@ -30,5 +30,5 @@ struct GroceryCard: View {
 }
 
 #Preview {
-  GroceryCard(name: "H-E-B", image: "Store3")
+  GroceryCard(name: "H-E-B", image: "Garden3")
 }

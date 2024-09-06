@@ -16,7 +16,7 @@ struct DeleteButton: View {
       .frame(height: 55)
       .frame(maxWidth: .infinity)
       .background(Color.red)
-      .cornerRadius(8)
+      .cornerRadius(10)
 
   }
 }

@@ -26,6 +26,10 @@
 		2486C6452C83FF7200DEBFCD /* DeleteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2486C6442C83FF7200DEBFCD /* DeleteButton.swift */; };
 		2486C6472C84063E00DEBFCD /* GroceryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2486C6462C84063E00DEBFCD /* GroceryCard.swift */; };
 		2486C6492C840A3A00DEBFCD /* ProductRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2486C6482C840A3A00DEBFCD /* ProductRow.swift */; };
+		2486C64B2C8555B500DEBFCD /* ResetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2486C64A2C8555B500DEBFCD /* ResetPasswordView.swift */; };
+		2486C64F2C8AAD6F00DEBFCD /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2486C64E2C8AAD6F00DEBFCD /* ListItem.swift */; };
+		2486C6512C8AB0F900DEBFCD /* AddListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2486C6502C8AB0F900DEBFCD /* AddListView.swift */; };
+		2486C6532C8ABC0200DEBFCD /* PickerRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2486C6522C8ABC0200DEBFCD /* PickerRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +51,10 @@
 		2486C6442C83FF7200DEBFCD /* DeleteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteButton.swift; sourceTree = "<group>"; };
 		2486C6462C84063E00DEBFCD /* GroceryCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryCard.swift; sourceTree = "<group>"; };
 		2486C6482C840A3A00DEBFCD /* ProductRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRow.swift; sourceTree = "<group>"; };
+		2486C64A2C8555B500DEBFCD /* ResetPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordView.swift; sourceTree = "<group>"; };
+		2486C64E2C8AAD6F00DEBFCD /* ListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItem.swift; sourceTree = "<group>"; };
+		2486C6502C8AB0F900DEBFCD /* AddListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddListView.swift; sourceTree = "<group>"; };
+		2486C6522C8ABC0200DEBFCD /* PickerRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,12 +91,9 @@
 			children = (
 				2486C6372C81694100DEBFCD /* Components */,
 				2486C6242C7D6E8D00DEBFCD /* Authentication */,
+				2486C64D2C8AAD3200DEBFCD /* Model */,
+				2486C64C2C8AACF200DEBFCD /* Views */,
 				2486C60F2C7D5EF500DEBFCD /* GroceryApp.swift */,
-				2486C6402C817DDD00DEBFCD /* TabBar.swift */,
-				2486C6112C7D5EF500DEBFCD /* MainView.swift */,
-				2486C6422C817E4700DEBFCD /* FavoriteView.swift */,
-				2486C6332C8162D900DEBFCD /* SplashView.swift */,
-				2486C6312C7ED5D300DEBFCD /* SettingsView.swift */,
 				2486C6132C7D5EF600DEBFCD /* Assets.xcassets */,
 				2486C61D2C7D6B3D00DEBFCD /* GoogleService-Info.plist */,
 				2486C6152C7D5EF600DEBFCD /* Preview Content */,
@@ -108,8 +113,9 @@
 			isa = PBXGroup;
 			children = (
 				2486C62B2C7D77C300DEBFCD /* AuthenticationManager.swift */,
-				2486C6352C81672E00DEBFCD /* AuthView.swift */,
 				2486C63A2C816A3C00DEBFCD /* AuthViewModel.swift */,
+				2486C6352C81672E00DEBFCD /* AuthView.swift */,
+				2486C64A2C8555B500DEBFCD /* ResetPasswordView.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -122,8 +128,30 @@
 				2486C6442C83FF7200DEBFCD /* DeleteButton.swift */,
 				2486C6462C84063E00DEBFCD /* GroceryCard.swift */,
 				2486C6482C840A3A00DEBFCD /* ProductRow.swift */,
+				2486C6522C8ABC0200DEBFCD /* PickerRow.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		2486C64C2C8AACF200DEBFCD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2486C6402C817DDD00DEBFCD /* TabBar.swift */,
+				2486C6112C7D5EF500DEBFCD /* MainView.swift */,
+				2486C6422C817E4700DEBFCD /* FavoriteView.swift */,
+				2486C6332C8162D900DEBFCD /* SplashView.swift */,
+				2486C6312C7ED5D300DEBFCD /* SettingsView.swift */,
+				2486C6502C8AB0F900DEBFCD /* AddListView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2486C64D2C8AAD3200DEBFCD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2486C64E2C8AAD6F00DEBFCD /* ListItem.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,6 +237,9 @@
 				2486C6322C7ED5D300DEBFCD /* SettingsView.swift in Sources */,
 				2486C63D2C8170F300DEBFCD /* PrimaryButton.swift in Sources */,
 				2486C6492C840A3A00DEBFCD /* ProductRow.swift in Sources */,
+				2486C64F2C8AAD6F00DEBFCD /* ListItem.swift in Sources */,
+				2486C6532C8ABC0200DEBFCD /* PickerRow.swift in Sources */,
+				2486C6512C8AB0F900DEBFCD /* AddListView.swift in Sources */,
 				2486C6472C84063E00DEBFCD /* GroceryCard.swift in Sources */,
 				2486C62C2C7D77C300DEBFCD /* AuthenticationManager.swift in Sources */,
 				2486C6432C817E4700DEBFCD /* FavoriteView.swift in Sources */,
@@ -216,6 +247,7 @@
 				2486C63F2C8175D800DEBFCD /* SecondaryButton.swift in Sources */,
 				2486C6452C83FF7200DEBFCD /* DeleteButton.swift in Sources */,
 				2486C6362C81672E00DEBFCD /* AuthView.swift in Sources */,
+				2486C64B2C8555B500DEBFCD /* ResetPasswordView.swift in Sources */,
 				2486C63B2C816A3C00DEBFCD /* AuthViewModel.swift in Sources */,
 				2486C6412C817DDD00DEBFCD /* TabBar.swift in Sources */,
 			);
