@@ -30,6 +30,8 @@
 		2486C64F2C8AAD6F00DEBFCD /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2486C64E2C8AAD6F00DEBFCD /* ListItem.swift */; };
 		2486C6512C8AB0F900DEBFCD /* AddListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2486C6502C8AB0F900DEBFCD /* AddListView.swift */; };
 		2486C6532C8ABC0200DEBFCD /* PickerRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2486C6522C8ABC0200DEBFCD /* PickerRow.swift */; };
+		2486C6552C91332F00DEBFCD /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2486C6542C91332F00DEBFCD /* Store.swift */; };
+		2486C6572C91371A00DEBFCD /* StoreRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2486C6562C91371A00DEBFCD /* StoreRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +57,8 @@
 		2486C64E2C8AAD6F00DEBFCD /* ListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItem.swift; sourceTree = "<group>"; };
 		2486C6502C8AB0F900DEBFCD /* AddListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddListView.swift; sourceTree = "<group>"; };
 		2486C6522C8ABC0200DEBFCD /* PickerRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerRow.swift; sourceTree = "<group>"; };
+		2486C6542C91332F00DEBFCD /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		2486C6562C91371A00DEBFCD /* StoreRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +133,7 @@
 				2486C6462C84063E00DEBFCD /* GroceryCard.swift */,
 				2486C6482C840A3A00DEBFCD /* ProductRow.swift */,
 				2486C6522C8ABC0200DEBFCD /* PickerRow.swift */,
+				2486C6562C91371A00DEBFCD /* StoreRow.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -150,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				2486C64E2C8AAD6F00DEBFCD /* ListItem.swift */,
+				2486C6542C91332F00DEBFCD /* Store.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -234,6 +240,7 @@
 			files = (
 				2486C6122C7D5EF500DEBFCD /* MainView.swift in Sources */,
 				2486C6102C7D5EF500DEBFCD /* GroceryApp.swift in Sources */,
+				2486C6572C91371A00DEBFCD /* StoreRow.swift in Sources */,
 				2486C6322C7ED5D300DEBFCD /* SettingsView.swift in Sources */,
 				2486C63D2C8170F300DEBFCD /* PrimaryButton.swift in Sources */,
 				2486C6492C840A3A00DEBFCD /* ProductRow.swift in Sources */,
@@ -246,6 +253,7 @@
 				2486C6342C8162D900DEBFCD /* SplashView.swift in Sources */,
 				2486C63F2C8175D800DEBFCD /* SecondaryButton.swift in Sources */,
 				2486C6452C83FF7200DEBFCD /* DeleteButton.swift in Sources */,
+				2486C6552C91332F00DEBFCD /* Store.swift in Sources */,
 				2486C6362C81672E00DEBFCD /* AuthView.swift in Sources */,
 				2486C64B2C8555B500DEBFCD /* ResetPasswordView.swift in Sources */,
 				2486C63B2C816A3C00DEBFCD /* AuthViewModel.swift in Sources */,
@@ -386,7 +394,7 @@
 				DEVELOPMENT_TEAM = L5MEY32333;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = Grocery;
+				INFOPLIST_KEY_CFBundleDisplayName = "Shopping Lists";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -421,7 +429,7 @@
 				DEVELOPMENT_TEAM = L5MEY32333;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = Grocery;
+				INFOPLIST_KEY_CFBundleDisplayName = "Shopping Lists";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

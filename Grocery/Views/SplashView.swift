@@ -13,7 +13,7 @@ struct SplashView: View {
       Color(Color.background)
         .ignoresSafeArea()
       VStack {
-        Text("Grocery List")
+        Text("Shopping List")
           .foregroundStyle(Color.text)
           .font(.largeTitle.bold())
         Spacer()

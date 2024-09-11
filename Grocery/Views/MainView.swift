@@ -12,57 +12,63 @@ struct MainView: View {
   @State private var showAuthenticationView = false
   @State private var showSettingsView = false
   @State private var showAddListView = false
-
+  @State private var lists = Lists()
+  let columns = [GridItem(.adaptive(minimum: 150))]
 
   var body: some View {
-    ZStack {
-      NavigationStack {
-        ZStack {
-          Color(Color.background)
-            .ignoresSafeArea()
-          VStack {
-            Text("Your Grocery List App")
-              .foregroundStyle(Color.text)
-          }
-          .padding()
-          .toolbar {
-            ToolbarItem(placement: .topBarLeading) {
-              Button {
-                showSettingsView = true
-              } label: {
-                Image(systemName: "gear")
-                  .padding(.horizontal)
-                  .foregroundStyle(Color.text)
-              }.sheet(isPresented: $showSettingsView) {
-                SettingsView(showAuthenticationView: $showAuthenticationView)
-                  .presentationDetents([.height(320)])
-                  .presentationBackground(.ultraThinMaterial)
-                  .presentationCornerRadius(25)
-              }
+    NavigationStack {
+      ZStack {
+        Color(Color.background)
+          .ignoresSafeArea()
+        ScrollView {
+          LazyVGrid(columns: columns) {
+            ForEach(lists.stores) { store in
+              StoreRow(name: store.name, image: "\(store.type)1")
             }
-            ToolbarItem(placement: .topBarTrailing) {
-              Button {
-                showAddListView = true
-              } label: {
-                Image(systemName: "plus")
-                  .padding(.horizontal)
-                  .foregroundStyle(Color.text)
-              }.sheet(isPresented: $showAddListView) {
-                AddListView()
-              }
-            }
+          }.padding()
+//          .toolbar {
+//            ToolbarItem(placement: .topBarLeading) {
+//              Button {
+//                showSettingsView = true
+//              } label: {
+//                Image(systemName: "gear")
+//                  .padding(.horizontal)
+//                  .foregroundStyle(Color.text)
+//              }.sheet(isPresented: $showSettingsView) {
+//                SettingsView(showAuthenticationView: $showAuthenticationView)
+//                  .presentationDetents([.height(320)])
+//                  .presentationBackground(.ultraThinMaterial)
+//                  .presentationCornerRadius(25)
+//              }
+//            }
+//            ToolbarItem(placement: .topBarTrailing) {
+//              Button {
+//                showAddListView = true
+//              } label: {
+//                Image(systemName: "plus")
+//                  .padding(.horizontal)
+//                  .foregroundStyle(Color.text)
+//              }.sheet(isPresented: $showAddListView) {
+//                AddListView()
+//              }
+//            }
+//          }
         }
-        }.navigationTitle("Lists")
+        .navigationTitle("Lists")
+      }.onAppear {
+        let authUser = try? AuthenticationManager.shared.getAuthenticatedUser()
+        self.showAuthenticationView = authUser == nil
       }
-    }.onAppear {
-      let authUser = try? AuthenticationManager.shared.getAuthenticatedUser()
-      self.showAuthenticationView = authUser == nil
-    }
-    .fullScreenCover(isPresented: $showAuthenticationView) {
-      NavigationStack{
-        AuthView(showAuthenticationView: $showAuthenticationView)
+      .fullScreenCover(isPresented: $showAuthenticationView) {
+        NavigationStack{
+          AuthView(showAuthenticationView: $showAuthenticationView)
+        }
       }
     }
+  }
+
+  func removeStore(at offsets: IndexSet) {
+    lists.stores.remove(atOffsets: offsets)
   }
 }
 

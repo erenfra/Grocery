@@ -12,7 +12,7 @@ struct FavoriteView: View {
       ZStack {
         Color(Color.background)
           .ignoresSafeArea()
-        Text("Favorites")
+        Text("List of Favorite products")
           .foregroundStyle(Color.text)
       }
     }

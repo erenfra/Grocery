@@ -25,7 +25,7 @@ struct ListItem: Identifiable {
 
 }
 
-@Observable
-class Lists {
-  var listItems = [ListItem]()
-}
+//@Observable
+//class Lists {
+//  var listItems = [ListItem]()
+//}

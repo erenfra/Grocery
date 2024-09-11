@@ -12,7 +12,7 @@ struct AddListView: View {
   @State private var storeType = "Grocery"
   @State private var name = ""
   var stores = ["Art Supply" , "Bakery", "Garden" , "Grocery", "Hardware", "Home Decor", "Pharmacy"]
-
+  var lists: Lists
   var body: some View {
     NavigationStack {
       ZStack {
@@ -72,5 +72,5 @@ struct AddListView: View {
 }
 
 #Preview {
-  AddListView()
+  AddListView(lists: Lists())
 }
