@@ -30,5 +30,5 @@ struct GroceryCard: View {
 }
 
 #Preview {
-  GroceryCard(name: "H-E-B", image: "Garden3")
+  GroceryCard(name: "H-E-B", image: "Home Decor3")
 }

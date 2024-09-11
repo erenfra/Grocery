@@ -11,7 +11,7 @@ struct AddListView: View {
   @Environment(\.dismiss) var dismiss
   @State private var storeType = "Grocery"
   @State private var name = ""
-  var stores = ["Art Supply" , "Garden" , "Grocery", "Hardware", "Pharmacy"]
+  var stores = ["Art Supply" , "Bakery", "Garden" , "Grocery", "Hardware", "Home Decor", "Pharmacy"]
 
   var body: some View {
     NavigationStack {
