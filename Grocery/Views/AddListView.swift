@@ -19,28 +19,34 @@ struct AddListView: View {
         Color(Color.background)
           .ignoresSafeArea()
         VStack(alignment: .leading, spacing: 30) {
-          TextField("List Name", text: $name)
-            .foregroundStyle(Color.text)
-            .padding()
-            .overlay {
-              RoundedRectangle(cornerRadius: 10)
-                .stroke(Color.text)
+          VStack(alignment: .leading, spacing: 10) {
+            Text("List Name")
+              .foregroundStyle(Color.text)
+
+            TextField("Enter list name", text: $name)
+              .foregroundStyle(Color.text)
+              .padding()
+              .overlay {
+                RoundedRectangle(cornerRadius: 10)
+                  .stroke(Color.text)
             }
+          }
           VStack(alignment: .leading) {
             Text("List Type")
-              .font(.title3.bold())
+              .foregroundStyle(Color.text)
             Picker(selection: $storeType, label: Text("List Type")) {
               ForEach(stores, id: \.self) { store in
                 PickerRow(name: store)
               }
             }.pickerStyle(.wheel)
+              .overlay {
+                RoundedRectangle(cornerRadius: 10)
+                  .stroke(Color.text)
+              }
 
-          }.padding()
-            .foregroundStyle(Color.text)
-          .overlay {
-            RoundedRectangle(cornerRadius: 10)
-              .stroke(Color.text)
           }
+
+
           Button {
             dismiss()
           } label: {

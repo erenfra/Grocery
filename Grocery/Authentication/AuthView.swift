@@ -22,10 +22,7 @@ struct AuthView: View {
             .scaledToFit()
             .frame(width: 120)
             .padding()
-            .overlay {
-              RoundedRectangle(cornerRadius: 10)
-                .stroke(Color.text)
-            }
+
 
           VStack(spacing: 20) {
             VStack(alignment: .leading, spacing: 10) {
