@@ -22,7 +22,6 @@
 		2486C63D2C8170F300DEBFCD /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2486C63C2C8170F300DEBFCD /* PrimaryButton.swift */; };
 		2486C63F2C8175D800DEBFCD /* SecondaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2486C63E2C8175D800DEBFCD /* SecondaryButton.swift */; };
 		2486C6412C817DDD00DEBFCD /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2486C6402C817DDD00DEBFCD /* TabBar.swift */; };
-		2486C6432C817E4700DEBFCD /* FavoriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2486C6422C817E4700DEBFCD /* FavoriteView.swift */; };
 		2486C6452C83FF7200DEBFCD /* DeleteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2486C6442C83FF7200DEBFCD /* DeleteButton.swift */; };
 		2486C6472C84063E00DEBFCD /* GroceryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2486C6462C84063E00DEBFCD /* GroceryCard.swift */; };
 		2486C6492C840A3A00DEBFCD /* ProductRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2486C6482C840A3A00DEBFCD /* ProductRow.swift */; };
@@ -32,6 +31,7 @@
 		2486C6532C8ABC0200DEBFCD /* PickerRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2486C6522C8ABC0200DEBFCD /* PickerRow.swift */; };
 		2486C6552C91332F00DEBFCD /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2486C6542C91332F00DEBFCD /* Store.swift */; };
 		2486C6572C91371A00DEBFCD /* StoreRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2486C6562C91371A00DEBFCD /* StoreRow.swift */; };
+		2486C6592C914C7700DEBFCD /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2486C6582C914C7700DEBFCD /* FavoritesView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,7 +49,6 @@
 		2486C63C2C8170F300DEBFCD /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 		2486C63E2C8175D800DEBFCD /* SecondaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryButton.swift; sourceTree = "<group>"; };
 		2486C6402C817DDD00DEBFCD /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
-		2486C6422C817E4700DEBFCD /* FavoriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteView.swift; sourceTree = "<group>"; };
 		2486C6442C83FF7200DEBFCD /* DeleteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteButton.swift; sourceTree = "<group>"; };
 		2486C6462C84063E00DEBFCD /* GroceryCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryCard.swift; sourceTree = "<group>"; };
 		2486C6482C840A3A00DEBFCD /* ProductRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRow.swift; sourceTree = "<group>"; };
@@ -59,6 +58,7 @@
 		2486C6522C8ABC0200DEBFCD /* PickerRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerRow.swift; sourceTree = "<group>"; };
 		2486C6542C91332F00DEBFCD /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		2486C6562C91371A00DEBFCD /* StoreRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreRow.swift; sourceTree = "<group>"; };
+		2486C6582C914C7700DEBFCD /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,10 +143,10 @@
 			children = (
 				2486C6402C817DDD00DEBFCD /* TabBar.swift */,
 				2486C6112C7D5EF500DEBFCD /* MainView.swift */,
-				2486C6422C817E4700DEBFCD /* FavoriteView.swift */,
 				2486C6332C8162D900DEBFCD /* SplashView.swift */,
 				2486C6312C7ED5D300DEBFCD /* SettingsView.swift */,
 				2486C6502C8AB0F900DEBFCD /* AddListView.swift */,
+				2486C6582C914C7700DEBFCD /* FavoritesView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -246,10 +246,10 @@
 				2486C6492C840A3A00DEBFCD /* ProductRow.swift in Sources */,
 				2486C64F2C8AAD6F00DEBFCD /* ListItem.swift in Sources */,
 				2486C6532C8ABC0200DEBFCD /* PickerRow.swift in Sources */,
+				2486C6592C914C7700DEBFCD /* FavoritesView.swift in Sources */,
 				2486C6512C8AB0F900DEBFCD /* AddListView.swift in Sources */,
 				2486C6472C84063E00DEBFCD /* GroceryCard.swift in Sources */,
 				2486C62C2C7D77C300DEBFCD /* AuthenticationManager.swift in Sources */,
-				2486C6432C817E4700DEBFCD /* FavoriteView.swift in Sources */,
 				2486C6342C8162D900DEBFCD /* SplashView.swift in Sources */,
 				2486C63F2C8175D800DEBFCD /* SecondaryButton.swift in Sources */,
 				2486C6452C83FF7200DEBFCD /* DeleteButton.swift in Sources */,

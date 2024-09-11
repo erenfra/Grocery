@@ -16,7 +16,7 @@ struct TabBar: View {
           .tabItem {
             Label("Lists", systemImage: "list.bullet.clipboard")
           }
-        FavoriteView()
+        FavoritesView()
           .tabItem {
             Label("Favourites", systemImage: "heart")
           }
