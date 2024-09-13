@@ -20,6 +20,10 @@ struct TabBar: View {
           .tabItem {
             Label("Favourites", systemImage: "heart")
           }
+        StoresView()
+          .tabItem {
+            Label("Stores", systemImage: "house")
+          }
 
       }.tint(.text)
         .opacity(showSplash ? 0 : 1)

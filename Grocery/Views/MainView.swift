@@ -73,9 +73,7 @@ struct MainView: View {
     }
   }
 
-//  func removeStore(at offsets: IndexSet) {
-//    lists.stores.remove(atOffsets: offsets)
-//  }
+
 }
 
 #Preview {

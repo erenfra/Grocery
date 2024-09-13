@@ -31,6 +31,7 @@
 		2486C6572C91371A00DEBFCD /* StoreRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2486C6562C91371A00DEBFCD /* StoreRow.swift */; };
 		2486C65B2C93DBF400DEBFCD /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2486C65A2C93DBF400DEBFCD /* ListView.swift */; };
 		2486C65D2C93E67700DEBFCD /* FavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2486C65C2C93E67700DEBFCD /* FavView.swift */; };
+		2486C65F2C93F05400DEBFCD /* StoresView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2486C65E2C93F05400DEBFCD /* StoresView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +58,7 @@
 		2486C6562C91371A00DEBFCD /* StoreRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreRow.swift; sourceTree = "<group>"; };
 		2486C65A2C93DBF400DEBFCD /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		2486C65C2C93E67700DEBFCD /* FavView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavView.swift; sourceTree = "<group>"; };
+		2486C65E2C93F05400DEBFCD /* StoresView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoresView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +147,7 @@
 				2486C6502C8AB0F900DEBFCD /* AddListView.swift */,
 				2486C65A2C93DBF400DEBFCD /* ListView.swift */,
 				2486C65C2C93E67700DEBFCD /* FavView.swift */,
+				2486C65E2C93F05400DEBFCD /* StoresView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -237,6 +240,7 @@
 			files = (
 				2486C6122C7D5EF500DEBFCD /* MainView.swift in Sources */,
 				2486C6102C7D5EF500DEBFCD /* GroceryApp.swift in Sources */,
+				2486C65F2C93F05400DEBFCD /* StoresView.swift in Sources */,
 				2486C6572C91371A00DEBFCD /* StoreRow.swift in Sources */,
 				2486C6322C7ED5D300DEBFCD /* SettingsView.swift in Sources */,
 				2486C63D2C8170F300DEBFCD /* PrimaryButton.swift in Sources */,
