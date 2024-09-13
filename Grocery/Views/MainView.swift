@@ -24,15 +24,16 @@ struct MainView: View {
         ScrollView {
           LazyVGrid(columns: columns) {
             ForEach(stores) { store in
-              Button {
-
-              } label: {
+              NavigationLink(value: store) {
                 StoreRow(name: store.name, image: "\(store.type)1")
               }
             }
           }.padding()
         }
         .navigationTitle("Lists")
+        .navigationDestination(for: StoreData.self) { store in
+          ListView(store: store)
+        }
         .toolbar {
           ToolbarItem(placement: .topBarLeading) {
             Button {

@@ -6,21 +6,51 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct ListView: View {
   @Environment(\.dismiss) var dismiss
   @Environment(\.modelContext) var modelContext
+  var store: StoreData
+  @State private var showAddProductView = false
 
-  var title: String
-    var body: some View {
-      NavigationStack {
+  var body: some View {
+    ZStack {
+      Color(Color.background)
+        .ignoresSafeArea()
+      ScrollView {
         List {
-          
-        }.navigationTitle("\(title) List")
+
+        }.navigationTitle("\(store.name) List")
+          .navigationBarTitleDisplayMode(.inline)
+          .toolbar {
+            Button {
+              showAddProductView = true
+            } label: {
+              Image(systemName: "plus")
+                .padding(.horizontal)
+                .foregroundStyle(Color.text)
+            }.sheet(isPresented: $showAddProductView) {
+
+            }
+          }
       }
     }
+  }
 }
 
+
 #Preview {
-  ListView(title: "HEB")
+  do {
+    let config = ModelConfiguration(isStoredInMemoryOnly: true)
+    let container = try ModelContainer(for: StoreData.self, configurations: config)
+    let example = StoreData(name: "HEB", type: "Hardware")
+
+    return ListView(store: example)
+      .modelContainer(container)
+
+  } catch {
+    return Text("Failed to create preview: \(error.localizedDescription)")
+  }
+
 }
