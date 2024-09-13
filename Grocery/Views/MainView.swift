@@ -4,15 +4,16 @@
 //
 //  Created by Renato Oliveira Fraga on 8/26/24.
 //
-
+import SwiftData
 import SwiftUI
 
 struct MainView: View {
-
+  @Environment(\.modelContext) var modelContext
+  @Query var stores: [StoreData]
   @State private var showAuthenticationView = false
   @State private var showSettingsView = false
   @State private var showAddListView = false
-  @State private var lists = Lists()
+
   let columns = [GridItem(.adaptive(minimum: 150))]
 
   var body: some View {
@@ -22,39 +23,43 @@ struct MainView: View {
           .ignoresSafeArea()
         ScrollView {
           LazyVGrid(columns: columns) {
-            ForEach(lists.stores) { store in
-              StoreRow(name: store.name, image: "\(store.type)1")
+            ForEach(stores) { store in
+              Button {
+
+              } label: {
+                StoreRow(name: store.name, image: "\(store.type)1")
+              }
             }
           }.padding()
-//          .toolbar {
-//            ToolbarItem(placement: .topBarLeading) {
-//              Button {
-//                showSettingsView = true
-//              } label: {
-//                Image(systemName: "gear")
-//                  .padding(.horizontal)
-//                  .foregroundStyle(Color.text)
-//              }.sheet(isPresented: $showSettingsView) {
-//                SettingsView(showAuthenticationView: $showAuthenticationView)
-//                  .presentationDetents([.height(320)])
-//                  .presentationBackground(.ultraThinMaterial)
-//                  .presentationCornerRadius(25)
-//              }
-//            }
-//            ToolbarItem(placement: .topBarTrailing) {
-//              Button {
-//                showAddListView = true
-//              } label: {
-//                Image(systemName: "plus")
-//                  .padding(.horizontal)
-//                  .foregroundStyle(Color.text)
-//              }.sheet(isPresented: $showAddListView) {
-//                AddListView()
-//              }
-//            }
-//          }
         }
         .navigationTitle("Lists")
+        .toolbar {
+          ToolbarItem(placement: .topBarLeading) {
+            Button {
+              showSettingsView = true
+            } label: {
+              Image(systemName: "gear")
+                .padding(.horizontal)
+                .foregroundStyle(Color.text)
+            }.sheet(isPresented: $showSettingsView) {
+              SettingsView(showAuthenticationView: $showAuthenticationView)
+                .presentationDetents([.height(320)])
+                .presentationBackground(.ultraThinMaterial)
+                .presentationCornerRadius(25)
+            }
+          }
+          ToolbarItem(placement: .topBarTrailing) {
+            Button {
+              showAddListView = true
+            } label: {
+              Image(systemName: "plus")
+                .padding(.horizontal)
+                .foregroundStyle(Color.text)
+            }.sheet(isPresented: $showAddListView) {
+              AddListView()
+            }
+          }
+        }
       }.onAppear {
         let authUser = try? AuthenticationManager.shared.getAuthenticatedUser()
         self.showAuthenticationView = authUser == nil
@@ -67,9 +72,9 @@ struct MainView: View {
     }
   }
 
-  func removeStore(at offsets: IndexSet) {
-    lists.stores.remove(atOffsets: offsets)
-  }
+//  func removeStore(at offsets: IndexSet) {
+//    lists.stores.remove(atOffsets: offsets)
+//  }
 }
 
 #Preview {

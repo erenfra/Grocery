@@ -1,18 +1,18 @@
 //
-//  FavoriteView.swift
+//  FavView.swift
 //  Grocery
 //
-//  Created by Renato Oliveira Fraga on 9/10/24.
+//  Created by Renato Oliveira Fraga on 9/12/24.
 //
 
 import SwiftUI
 
-struct FavoritesView: View {
+struct FavView: View {
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
 }
 
 #Preview {
-    FavoritesView()
+    FavView()
 }

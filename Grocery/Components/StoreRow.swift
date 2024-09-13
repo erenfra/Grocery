@@ -19,7 +19,7 @@ struct StoreRow: View {
           Image(image)
             .resizable()
             .scaledToFit()
-            .frame(width:50)
+            .frame(width:70)
           Spacer()
           Text(name)
             .font(.headline)
@@ -27,10 +27,11 @@ struct StoreRow: View {
             .bold()
           Spacer()
         }.padding(10)
-        .overlay {
-          RoundedRectangle(cornerRadius: 10)
-            .stroke(Color.text)
-      }
+          .padding(.vertical, 10)
+          .overlay {
+            RoundedRectangle(cornerRadius: 10)
+              .stroke(Color.text)
+          }
       }
     }
 
@@ -38,5 +39,5 @@ struct StoreRow: View {
 }
 
 #Preview {
-    StoreRow(name: "H-E-B", image: "Grocery3")
+  StoreRow(name: "H-E-B", image: "Grocery3")
 }

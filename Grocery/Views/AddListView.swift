@@ -9,10 +9,11 @@ import SwiftUI
 
 struct AddListView: View {
   @Environment(\.dismiss) var dismiss
+  @Environment(\.modelContext) var modelContext
   @State private var storeType = "Grocery"
   @State private var name = ""
   var stores = ["Art Supply" , "Bakery", "Garden" , "Grocery", "Hardware", "Home Decor", "Pharmacy"]
-  var lists: Lists
+
   var body: some View {
     NavigationStack {
       ZStack {
@@ -43,18 +44,18 @@ struct AddListView: View {
                 RoundedRectangle(cornerRadius: 10)
                   .stroke(Color.text)
               }
-
           }
-
-
           Button {
+            let newStore = StoreData(name: name, type: storeType)
+            modelContext.insert(newStore)
+
             dismiss()
           } label: {
             PrimaryButton(title: "Save")
           }
           Spacer()
         }.padding()
-      }.navigationTitle("Add New List")
+      }.navigationTitle("Add New Store")
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
           ToolbarItem(placement: .topBarLeading) {
@@ -72,5 +73,5 @@ struct AddListView: View {
 }
 
 #Preview {
-  AddListView(lists: Lists())
+  AddListView()
 }

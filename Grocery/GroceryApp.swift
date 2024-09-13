@@ -4,7 +4,7 @@
 //
 //  Created by Renato Oliveira Fraga on 8/26/24.
 //
-
+import SwiftData
 import SwiftUI
 import Firebase
 
@@ -18,6 +18,7 @@ struct GroceryApp: App {
   var body: some Scene {
     WindowGroup {
       TabBar()
-    }
+    }.modelContainer(for: StoreData.self)
+      
   }
 }
