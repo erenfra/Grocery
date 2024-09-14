@@ -13,30 +13,52 @@ struct ListView: View {
   @Environment(\.modelContext) var modelContext
   var store: StoreData
   @State private var showAddProductView = false
+  @State private var newProduct = ""
+  @FocusState private var addProductIsFocused: Bool
 
   var body: some View {
     ZStack {
       Color(Color.background)
         .ignoresSafeArea()
-      ScrollView {
-        List {
-
-        }.navigationTitle("\(store.name) List")
-          .navigationBarTitleDisplayMode(.inline)
-          .toolbar {
-            Button {
-              showAddProductView = true
-            } label: {
-              Image(systemName: "plus")
-                .padding(.horizontal)
-                .foregroundStyle(Color.text)
-            }.sheet(isPresented: $showAddProductView) {
-
+      Form {
+        Section {
+          HStack {
+            TextField("Add a product to \(store.name) list", text: $newProduct)
+              .focused($addProductIsFocused)
+            Button("Add") {
+              addProduct()
+              addProductIsFocused = false
             }
           }
+        }
+        Section {
+          ForEach(store.products) { product in
+            ProductRow(product: product.item)
+          }.onDelete(perform: removeProduct)
+        }.navigationTitle("\(store.name)")
       }
     }
   }
+
+  func addProduct() {
+    guard newProduct.isEmpty == false else { return }
+    withAnimation {
+      let product = Product(item: newProduct)
+      store.products.append(product)
+      newProduct = ""
+    }
+  }
+
+  func removeProduct(at offsets: IndexSet) {
+    for offset in offsets {
+      let product = store.products[offset]
+      modelContext.delete(product)
+    }
+
+    store.products.remove(atOffsets: offsets)
+
+  }
+
 }
 
 

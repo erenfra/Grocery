@@ -15,22 +15,17 @@ struct ProductRow: View {
     VStack(alignment: .leading) {
       HStack(spacing: 15) {
         Image(systemName: inCart ? "checkmark.square.fill" : "square")
-          .foregroundStyle(Color.text)
-          .font(.title)
           .onTapGesture {
             inCart.toggle()
           }
         Text(product)
-          .font(.title)
-          .foregroundStyle(Color.text)
         Spacer()
         Image(systemName: isFavorite ? "heart.fill" : "heart")
-          .foregroundStyle(Color.text)
-          .font(.title)
           .onTapGesture {
             isFavorite.toggle()
           }
-      }
+      }.font(.body)
+        .foregroundStyle(Color.text)
     }
   }
 }

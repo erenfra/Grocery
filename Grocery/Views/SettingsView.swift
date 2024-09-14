@@ -17,7 +17,7 @@ struct SettingsView: View {
         Button {
 
         } label: {
-          PrimaryButton(title: "Share Grocery List")
+          PrimaryButton(title: "Share Lists")
         }
         Button {
           Task {
