@@ -35,9 +35,9 @@ struct ListView: View {
           ForEach(store.products) { product in
             ProductRow(product: product.item)
           }.onDelete(perform: removeProduct)
-        }.navigationTitle("\(store.name)")
+        }
       }
-    }
+    }.navigationTitle("\(store.name)")
   }
 
   func addProduct() {
