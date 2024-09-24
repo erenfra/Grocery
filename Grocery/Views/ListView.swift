@@ -23,7 +23,7 @@ struct ListView: View {
       Form {
         Section {
           HStack {
-            TextField("Add a product to \(store) list", text: $newProduct)
+            TextField("Add a product to \(store.name) list", text: $newProduct)
               .focused($addProductIsFocused)
             Button("Add") {
               addProduct()

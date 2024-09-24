@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MainView: View {
   @Environment(\.modelContext) var modelContext
-  @Query(sort: \StoreData.name) var stores: [StoreData]
+  @Query(sort: [SortDescriptor(\StoreData.name)]) var stores: [StoreData]
   @State private var showAuthenticationView = false
   @State private var showSettingsView = false
   @State private var showAddListView = false

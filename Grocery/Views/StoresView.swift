@@ -9,7 +9,7 @@ import SwiftUI
 
 struct StoresView: View {
   @Environment(\.modelContext) var modelContext
-  @Query(sort: \StoreData.name) var stores: [StoreData]
+  @Query(sort: [SortDescriptor(\StoreData.name)]) var stores: [StoreData]
   var body: some View {
     NavigationStack {
       ZStack {
